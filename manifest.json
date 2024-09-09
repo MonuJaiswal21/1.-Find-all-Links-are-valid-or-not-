@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Link Analyzer",
+    "version": "1.0",
+    "description": "An extension to analyze all links on a webpage.",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+ 
+
+  
